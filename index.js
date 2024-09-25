@@ -58,12 +58,12 @@ $(".action").on("click", function () {
     if ($(this).html() === "Slide"){
         $("h1").slideToggle();
     }
-    if ($(this).html() === "Opaque"){
-        if($("h1").css("opacity")===0.5)
-        {
-            $("h1").slideUp().slideDown().animate({opacity: 2});
+    if ($(this).html() === "Opaque") {
+        if ($("h1").css("opacity") == 0.5) {
+            $("h1").slideUp().slideDown().animate({opacity: 1});  
+        } else {
+            $("h1").slideUp().slideDown().animate({opacity: 0.5});  
         }
-        else
-        $("h1").slideUp().slideDown().animate({opacity: 0.5});
     }
+    
 });
